@@ -2,31 +2,25 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.landing-grid {
+  background: #fbfbfb;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.git-logo {
+  padding-top: 50px;
+  padding-bottom: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.kyber-logo {
+  max-height: 230px;
+  max-width: 230px;
+  padding-top: 10px;
+  padding-bottom: 70px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  color: #fbfbfb !important;
+  text-align: center !important;
+  background-color: #333 !important;
+  max-height: 50px;
 }
