@@ -1,21 +1,33 @@
-.App {
+.app {
+  background: #fbfbfb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
-.landing-grid {
-  background: #fbfbfb;
+.landing-grid h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.landing-grid h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
 }
 
 .git-logo {
-  padding-top: 50px;
-  padding-bottom: 70px;
+  padding-top: 10px;
+  padding-bottom: 60px;
 }
 
 .kyber-logo {
   max-height: 230px;
   max-width: 230px;
   padding-top: 10px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 
 .footer {
@@ -23,4 +35,58 @@
   text-align: center !important;
   background-color: #333 !important;
   max-height: 50px;
+}
+
+.beta {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.beta h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.beta-canal-logo {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  max-width: 350px;
+}
+
+.beta-button {
+  background: #326BC0;
+  color: white;
+  font-weight: bold;
+  border-color: #326BC0;
+  border-radius: 7px;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+
+.beta-button:hover {
+  background: #244e8c;
+  color: white;
+  border-color: #244e8c;
+}
+
+.contribution-row {
+  padding-top: 3em;
+}
+
+.claim-row {
+  padding-top: 5em;
+}
+
+.contract-link {
+  padding-top: 2em;
+}
+
+.contract-link-text {
+  color: #326BC0;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.beta-title {
+  padding-bottom: 0;
 }

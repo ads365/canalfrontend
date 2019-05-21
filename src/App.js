@@ -21,9 +21,9 @@ class App extends Component {
                 </Switch>
               </div>
             </Content>
-              <Footer className="footer">
-                <p>Canal Pty Ltd &copy; 2019</p>
-              </Footer>
+            <Footer className="footer">
+              <p>Canal Pty Ltd &copy; 2019</p>
+            </Footer>
           </Layout>
         </div>
       </BrowserRouter>

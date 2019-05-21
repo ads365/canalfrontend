@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import getWeb3 from "../utils/getWeb3";
+import CanalLogo from '../images/canalother1.png';
+import { Chip } from 'react-mdl';
 
 import Button from 'react-bootstrap/lib/Button';
 import Form from 'react-bootstrap/lib/Form';
@@ -9,9 +11,6 @@ import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Panel from 'react-bootstrap/lib/Panel';
-
-import BootstrapTable from 'react-bootstrap-table/lib/BootstrapTable';
-import TableHeaderColumn from 'react-bootstrap-table/lib/TableHeaderColumn';
 
 import "../App.css";
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
@@ -79,35 +78,35 @@ class Beta extends Component {
   }
 
   async handleContribution(event)
- {
-   if (typeof this.state.fwInstance !== 'undefined') {
-     event.preventDefault();
+   {
+     if (typeof this.state.fwInstance !== 'undefined') {
+       event.preventDefault();
 
-     await this.state.fwInstance.methods.contributorDeposit().send({from: this.state.account, value: this.state.web3.utils.toWei(this.state.contributeAmount, 'ether')})
+       await this.state.fwInstance.methods.contributorDeposit().send({from: this.state.account, value: this.state.web3.utils.toWei(this.state.contributeAmount, 'ether')})
+     }
    }
- }
 
  async handleClaim(event)
-{
-  if (typeof this.state.fwInstance !== 'undefined') {
-    event.preventDefault();
+  {
+    if (typeof this.state.fwInstance !== 'undefined') {
+      event.preventDefault();
 
-    await this.state.fwInstance.methods.contributorClaim().send({from: this.state.account})
+      await this.state.fwInstance.methods.contributorClaim().send({from: this.state.account})
+    }
   }
-}
 
 
   setLastTransactionDetails(result)
-  {
-    if(result.tx !== 'undefined')
     {
-      this.setState({etherscanLink: etherscanBaseUrl+"/tx/"+result.tx})
+      if(result.tx !== 'undefined')
+      {
+        this.setState({etherscanLink: etherscanBaseUrl+"/tx/"+result.tx})
+      }
+      else
+      {
+        this.setState({etherscanLink: etherscanBaseUrl})
+      }
     }
-    else
-    {
-      this.setState({etherscanLink: etherscanBaseUrl})
-    }
-  }
 
   render() {
     if (!this.state.web3) {
@@ -115,49 +114,51 @@ class Beta extends Component {
     }
     return (
       console.log(this.state.raisedBal),
-      <div className="App">
-      <Grid>
-      <Row>
-      <a href={"https://ropsten.etherscan.io/address/"+this.state.fwInstance.address} target="_blank" rel="noopener noreferrer">Contract Address</a>
-      </Row>
-      <br/>
-      <Row>
-      <Panel>
-      <Panel.Heading>Make Contribution</Panel.Heading>
-      <Form onSubmit={this.handleContribution}>
-          <FormGroup
-            controlId="fromCreateBounty"
-          >
-            <FormControl
-              type="text"
-              name="contributeAmount"
-              value={this.state.contributeAmount}
-              placeholder="Enter contribution amount"
-              onChange={this.handleChange}
-            />
-            <HelpBlock>Enter conribution amount</HelpBlock><br/>
-            <Button type="submit">Contribute</Button>
-          </FormGroup>
-      </Form>
-      </Panel>
-      </Row>
-
-      <br/>
-
-      <Row>
-      <Panel>
-      <Panel.Heading>Make Claim</Panel.Heading>
-      <Form onSubmit={this.handleClaim}>
-          <FormGroup
-            controlId="fromCreateBounty"
-          >
-            <HelpBlock>Claim Your Funds</HelpBlock><br/>
-            <Button type="submit">Claim</Button>
-          </FormGroup>
-      </Form>
-      </Panel>
-      </Row>
-      </Grid>
+      <div className="beta">
+        <Grid>
+          <Row>
+            <a href="/">
+              <img className="beta-canal-logo" src={CanalLogo} alt=""/>
+            </a>
+          </Row>
+          <Row className="beta-title">
+            <h4>Contributor Beta</h4>
+          </Row>
+          <Row>
+            <Chip>This Project Is In A Closed Beta. Use At Your Own Risk.</Chip>
+          </Row>
+          <Row className="contribution-row">
+            <Panel>
+              <Panel.Heading style={{backgroundColor:"#c1d5f2", fontWeight:"bold", fontSize:"17px", letterSpacing:"0.5px"}}>Make Contribution</Panel.Heading>
+              <Form onSubmit={this.handleContribution}>
+                  <FormGroup controlId="fromCreateBounty">
+                    <FormControl
+                      type="text"
+                      name="contributeAmount"
+                      value={this.state.contributeAmount}
+                      placeholder="Enter Contribution Amount In Ether"
+                      onChange={this.handleChange}/>
+                    <HelpBlock style={{color:"black", fontSize:"16px"}}>Enter contribution amount</HelpBlock><br/>
+                    <Button className="beta-button" type="submit">Contribute</Button>
+                  </FormGroup>
+              </Form>
+            </Panel>
+          </Row>
+          <Row className="claim-row">
+            <Panel>
+              <Panel.Heading style={{backgroundColor:"#c1d5f2", fontWeight:"bold", fontSize:"17px", letterSpacing:"0.5px"}}>Make Claim</Panel.Heading>
+              <Form onSubmit={this.handleClaim}>
+                  <FormGroup controlId="fromCreateBounty">
+                    <HelpBlock style={{color:"black", fontSize:"16px"}}>Claim Your Funds</HelpBlock><br/>
+                    <Button className="beta-button" type="submit">Claim</Button>
+                  </FormGroup>
+              </Form>
+            </Panel>
+          </Row>
+          <Row className="contract-link">
+            <a className="contract-link-text" href={"https://ropsten.etherscan.io/address/"+this.state.fwInstance.address} target="_blank" rel="noopener noreferrer">Etherscan Link To Smart Contract</a>
+          </Row>
+        </Grid>
       </div>
     );
   }
