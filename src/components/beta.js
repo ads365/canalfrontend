@@ -138,7 +138,7 @@ class Beta extends Component {
                       value={this.state.contributeAmount}
                       placeholder="Enter Contribution Amount In Ether"
                       onChange={this.handleChange}/>
-                    <HelpBlock style={{color:"black", fontSize:"16px"}}>Enter contribution amount</HelpBlock><br/>
+                    <HelpBlock style={{color:"black", fontSize:"16px"}}>Enter contribution amount in Ether in the field above. For example if you wish to conribute 1.5 Ether enter "1.5" above and then click "Contribute".</HelpBlock><br/>
                     <Button className="beta-button" type="submit">Contribute</Button>
                   </FormGroup>
               </Form>
@@ -146,10 +146,10 @@ class Beta extends Component {
           </Row>
           <Row className="claim-row">
             <Panel>
-              <Panel.Heading style={{backgroundColor:"#c1d5f2", fontWeight:"bold", fontSize:"17px", letterSpacing:"0.5px"}}>Make Claim</Panel.Heading>
+              <Panel.Heading style={{backgroundColor:"#c1d5f2", fontWeight:"bold", fontSize:"17px", letterSpacing:"0.5px"}}>Claim Funds</Panel.Heading>
               <Form onSubmit={this.handleClaim}>
                   <FormGroup controlId="fromCreateBounty">
-                    <HelpBlock style={{color:"black", fontSize:"16px"}}>Claim Your Funds</HelpBlock><br/>
+                    <HelpBlock style={{color:"black", fontSize:"16px"}}>Click the "Claim" button below to claim your funds - note this can only be done in the claim period.</HelpBlock><br/>
                     <Button className="beta-button" type="submit">Claim</Button>
                   </FormGroup>
               </Form>
