@@ -9,14 +9,10 @@
   text-align: center;
 }
 
-.landing-grid h3 {
+.landing-grid {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-}
-
-.landing-grid h5 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
+  color: #333;
 }
 
 .git-logo {
@@ -67,6 +63,12 @@
 }
 
 .beta-button:hover {
+  background: #244e8c;
+  color: white;
+  border-color: #244e8c;
+}
+
+.beta-button:focus {
   background: #244e8c;
   color: white;
   border-color: #244e8c;
