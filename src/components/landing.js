@@ -25,7 +25,9 @@ class Landing extends Component {
             </a>
             <br/>
             <h5>Contact Us</h5>
-            <h5>genesis@canalprotocol.com</h5>
+            <a href="mailto:genesis@canalprotocol.com" className="contact-link">
+              <h5>genesis@canalprotocol.com</h5>
+            </a>
           </Cell>
         </Grid>
       </div>
