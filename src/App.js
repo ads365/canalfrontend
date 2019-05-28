@@ -20,14 +20,15 @@ class App extends Component {
                   <Route path='/beta' component={Beta} />
                 </Switch>
               </div>
+              <div>
+                <Footer className="footer">
+                  <p>Canal Pty Ltd &copy; 2019</p>
+                </Footer>
+              </div>
             </Content>
-            <Footer className="footer">
-              <p>Canal Pty Ltd &copy; 2019</p>
-            </Footer>
           </Layout>
         </div>
       </BrowserRouter>
-
     );
   }
 }
