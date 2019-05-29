@@ -39,10 +39,14 @@
   color: #fbfbfb !important;
   text-align: center !important;
   background-color: #333 !important;
-  max-height: 50px;
-  width: 100%;
   bottom: 0;
+  left: 0;
+  width: 100%;
   position: relative;
+}
+
+.footer-text {
+  padding-top: 15px !important;
 }
 
 .beta {
