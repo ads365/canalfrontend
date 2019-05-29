@@ -22,6 +22,8 @@
 }
 
 .git-logo {
+  max-height: 230px;
+  max-width: 230px;
   padding-top: 10px;
   padding-bottom: 60px;
 }
@@ -98,6 +100,17 @@
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 0.5px;
+}
+
+.instructions {
+  color: #326BC0;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.instructions-row {
+  padding-top: 1em;
 }
 
 .beta-title {

@@ -15,6 +15,8 @@ import Panel from 'react-bootstrap/lib/Panel';
 import "../App.css";
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
+import Instructions from '../pdfs/canal-instructions.pdf'
+
 const etherscanBaseUrl = "https://ropsten.etherscan.io";
 
 const contractAddr = '0x90049f0dDCD4D39c5AC1F9e62EBA2C833A15Ed1D';
@@ -126,6 +128,10 @@ class Beta extends Component {
           </Row>
           <Row>
             <Chip>This Project Is In A Closed Beta. Use At Your Own Risk.</Chip>
+          </Row>
+          <br/>
+          <Row className="instructions-row">
+            <a className="instructions" href={Instructions}>Help/Instructions</a>
           </Row>
           <Row className="contribution-row">
             <Panel>
