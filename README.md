@@ -6,6 +6,8 @@ Live Version: [Website](http://www.canalprotocol.com/)
 
 Web 3 Page: [http://www.canalprotocol.com/beta](http://www.canalprotocol.com/beta)
 
+Refer to [THIS](https://github.com/Canal-Protocol/Distributed-Liquidity-Pool) to unserstand the smart contracts/blochcain components. 
+
 The route to the beta page is /beta
 
 ### Install Dependencies
