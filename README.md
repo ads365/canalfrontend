@@ -1,4 +1,5 @@
 **Note: Use Ropsten - this is currently connected to a dummy contract, transactions will send but will also fail**
+
 **Note: To access/interact with the beta page you will need a metamask account**
 
 Live Version: [Website](http://www.canalprotocol.com/)
